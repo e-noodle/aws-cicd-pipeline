@@ -1,7 +1,7 @@
 hello-world
 ===========
 
-A whole new world again for us!
+A whole new world again for us too!
 
 [![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 
