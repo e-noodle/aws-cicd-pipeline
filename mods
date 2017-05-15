@@ -1,0 +1,8 @@
+ 43  sudo rm /etc/alternatives/jre
+   44  sudo ln -s /usr/lib/jvm/jre-1.8.0-openjdk.x86_64 /etc/alternatives/jre
+   45  rm /etc/alternatives/java
+   46  sudo rm /etc/alternatives/java
+   47  sudo ln -s /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java /etc/alternatives/java
+   48  /etc/init.d/jenkins restart
+   49  sudo /etc/init.d/jenkins restart
+
