@@ -25,4 +25,6 @@ Build and run using Docker Compose:
 
 Hello world!
 ----
-----
+
+[Continuous Delivery Pipeline for Amazon ECS Using Jenkins, GitHub, and Amazon ECR](https://github.com/awslabs/aws-cicd-docker-containers)
+[]
