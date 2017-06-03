@@ -87,9 +87,10 @@
       ```bash
       ssh-keygen -t rsa -b 2048 -f ~/.ssh/${github_project}-private-key -N ""
       ```
-      **warning** `-N ""` above will revent the passphrase prompt from appearing.
-      **tip** for added security, omit this and use a passphrase for added security.
-      **note** you will need to [add the key to your local agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+         - **warning** `-N ""` above will revent the passphrase prompt from appearing.
+         - **tip** for added security, omit this and use a passphrase for added security.
+         - **note** you will need to [add the key to your local agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
    1. ensure correct permissions
       ```bash
       chmod 600 ~/.ssh/${github_project}-private-key
