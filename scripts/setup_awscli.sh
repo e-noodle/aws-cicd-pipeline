@@ -64,6 +64,18 @@ prechecks
 # create profle
 ################
 
+# check if awscli is installed and configure epel if required
+epel_centos7=http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
+
+[[ $(which aws >/dev/null 2>&1) ]] || \
+[[ $(rpm -qa | grep awscli | wc -l) -gt 0 ]] || \
+[[ $(yum --enablerepo=epel search awscli >/dev/null 2>&1) ]] || \
+[[ $(rpm -qa | grep epel-release | wc -l) -eq 0 ]] || \
+[[ $(rpm -ivh ${epel_centos7} >/dev/null 2>&1) ]] || die "unable to install $epel_centos7"
+
+# install awscli
+yum --enablerepo=epel -y install awscli >/dev/null 2>&1 || die "unable to install awscli"
+
 pp " => creating aws config directory"
 mkdir '~/.aws' || die "unable to create ~/.aws"
 
