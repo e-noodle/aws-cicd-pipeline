@@ -87,7 +87,9 @@
       ```bash
       ssh-keygen -t rsa -b 2048 -f ~/.ssh/${github_project}-private-key -N ""
       ```
-      **note** `-N ""` above will revent the passphrase prompt from appearing
+      **warning** `-N ""` above will revent the passphrase prompt from appearing.
+      **tip** for added security, omit this and use a passphrase for added security.
+      **note** you will need to add the key to your local agent (see below).
    1. ensure correct permissions
       ```bash
       chmod 600 ~/.ssh/${github_project}-private-key
@@ -98,8 +100,8 @@
       - [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
       - **note** free github account users will need to use a deployment key to grant permissions on a per repository basis.
          - add a deployment key for your repository at `https://github.com/<user-account>/<project>/settings/keys`
-         - more inforamtion on deployment keys: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
-      - **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+         - more inforamtion on deployment keys<br>https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
+      - **optional** for keys with passphrases [***adding your private key to ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 1. ### configure git
