@@ -21,27 +21,18 @@
 
 1. ### configure aws-cli:
 
+   1. *option 1 - install script (use at your own risk)*
+   
+   download and run the following script to configure aws-cli
+   [aws cli setup script](script/setup_awscli.sh)
+   
+   
+   1  *option 2 - manual*
+   
    1. create an `~/.aws/credentials` file:
+      - replace `${PROFILE_NAME}` with the name of your project
    
    ```bash
-   #!/bin/bash
-   # script to configure aws-cli
-   
-   PROJECTNAME=aws-docker-cicd-admin  # <- update this to your project name
-   
-   function quit() { echo -e " => ERROR:\n$1\n Aborting..." && exit 1 2>/dev/null}
-   
-   echo "precheck..."
-   [[ -d '~/.aws' ]] || quit "~/.aws directory already exists"
-   [[ -f '~/.aws/config ]] || quit "~/.aws/confg file already exists"
-   [[ -f '~/.aws/credentials ]] || quit "~/.aws/credentials file already exists   "
-   [[ -z $PROJECTNAME]] || quit "you must provide a project name"
-
-   echo " => creating aws config directory"
-   mkdir '~/.aws' || quit "unable to create ~/.aws"
-
-   echo " => create ~/.aws/credentials file to store credentials"
-   cat > ~/.aws/credentials <<EOFF
    # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
    #  + ensure permissions are secure (not world read or write)
    #  + do not use shared accounts, names or passwords
@@ -53,32 +44,33 @@
    # aws_access_key_id = <aws_access_key_id>
    # aws_secret_access_key = <aws_access_key>
    
-   [${PROJECTNAME}]
+   [${PROFILENAME}]
    aws_access_key_id =  <cid_aws_access_key_id>
    aws_secret_access_key = <cicd_aws_access_key>
-   EOFF
-   
-   echo " => create /.aws/config to store profile"
+   ``` 
+   1. create `/.aws/config` to store profile
+      - replace `${PROFILE_NAME}` with the name of your project
 
-   cat > ~/.aws/config <<EOF
+   ```bash
    [default]
    region = us-east-1
    output = json
-   [${PROJECTNAME}]
+   [${PROFILE_NAME}]
    output = json
    region = us-east-1
-   EOF
-   [[$? -eq 0]] || quit 'error creating ~.aws/config'   
+   ```
 
-   echo "setting permissions"
+   1. set permissions
+   ```bash
    chmod 600 ~/.aws/{credentials,config} 
    chown -Rf #(whoami):$(whoami) ~/.aws/{credentials,config}
-   [[$? -eq 0]] || quit 'error setting permissions'
-   echo " => success: created aws configs ~/.aws/credentials and ~/.aws/config"
-   exit 0
    ```
+
    1. populate <aws_access_key_id>  and <aws_access_key> in ~/.aws/credentials with the account credentials.
+
    1. confirm the region settings provided in ~/.aws/config
+
+
 1. ### github
 
    1. [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
@@ -106,9 +98,9 @@
 1. ### grant access to your github repository
 
       - [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-      - **note** free github account users will need to use the deployment key to grant permissions on a per repository basis.
-         - to add a deployment key for your repository visit `https://github.com/<user-account>/<project>/settings/keys`
-         - for more inforamtion on deployment keys visit: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
+      - **note** free github account users will need to use a deployment key to grant permissions on a per repository basis.
+         - add a deployment key for your repository at `https://github.com/<user-account>/<project>/settings/keys`
+         - more inforamtion on deployment keys: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
       - **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
