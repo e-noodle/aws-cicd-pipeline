@@ -29,7 +29,6 @@
    1. **option 2 - manual**
    
    1. create an `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
-   
    ```bash
    # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
    #  + ensure permissions are secure (not world read or write)
@@ -47,7 +46,6 @@
    aws_secret_access_key = <cicd_aws_access_key>
    ``` 
    1. create `/.aws/config` with the following, replacing `${PROFILE_NAME}` with the name of your project.
-
    ```bash
    [default]
    region = us-east-1
@@ -56,17 +54,13 @@
    output = json
    region = us-east-1
    ```
-
    1. set permissions
    ```bash
    chmod 600 ~/.aws/{credentials,config} 
-   chown -Rf #(whoami):$(whoami) ~/.aws/{credentials,config}
+   chown $(whoami):$(whoami) ~/.aws/{credentials,config}
    ```
-
    1. populate <aws_access_key_id>  and <aws_access_key> in ~/.aws/credentials with the account credentials.
-
    1. confirm the region settings provided in ~/.aws/config
-
 
 1. ### github
 

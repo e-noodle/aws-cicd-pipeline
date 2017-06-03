@@ -102,7 +102,7 @@ EOF
 
 pp "setting permissions"
 chmod 600 ~/.aws/{credentials,config} 
-chown -Rf $(whoami):$(whoami) ~/.aws/{credentials,config}
+chown $(whoami):$(whoami) ~/.aws/{credentials,config}
 
 [[$? -eq 0]] || die 'error setting permissions'
 pp " => completed"
