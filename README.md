@@ -11,13 +11,13 @@ how to run a cicd pipeline in aws with docker and jenkins
       git clone https://github.com/e-noodle/aws-cicd-pipeline.git
       sudo /bin/bash scripts/setup_awscli.sh
       ```
-   1. [setup a github repository](#github)
-   1. [generate-keys-for-the-project](#generate-keys-for-the-project)
-   1. [grant access to your github repository](#grant-access-to-your-github-repository)
-   1. [configure git](#configure-git)
-   1. [create a ssh profile](#create-a-ssh-profile)
-   1. [testing your setup](#testing-your-setup)
-   1. [connecting to aws](#connecting-to-aws)
+     1. [setup a github repository](#github)
+     2. [generate-keys-for-the-project](#generate-keys-for-the-project)
+     3. [grant access to your github repository](#grant-access-to-your-github-repository)
+     4. [configure git](#configure-git)
+     5. [create a ssh profile](#create-a-ssh-profile)
+     6. [testing your setup](#testing-your-setup)
+     7. [connecting to aws](#connecting-to-aws)
  
 
 1. ### requirements
@@ -50,9 +50,9 @@ how to run a cicd pipeline in aws with docker and jenkins
       download and run [aws cli setup script](scripts/setup_awscli.sh) to configure aws-cli
       
       example:
-      the following example will create a profile called cicd-admin-aws
+      the following example will create a profile called **`cicd-admin-aws`**
       ```
-      profile_name=cicd-admin-aws curl -sL https://github.com/e-noodle/aws-cicd-pipeline/raw/master/scripts/setup_awscli.sh | bash /dev/stdin $profilename
+      curl -sL https://github.com/e-noodle/aws-cicd-pipeline/raw/master/scripts/setup_awscli.sh | bash /dev/stdin profile_name=cicd-admin-aws
       ```
    
    1. **option 2 - manual**
