@@ -53,13 +53,12 @@ populate `~/.gitconfig`
 
 setup ssh profiles usig `~/.ssh/config`:
 ```
-Host github-aws-cicd-pipeline
+Host github.com/<github_account>
   HostName github.com
   User git
   IdentityFile ~/.ssh/<github_project>-private-key.pem
 
-Host aws_codecommit
-  HostName git-codecommit.*.amazonaws.com
+Host git-codecommit.*.amazonaws.com
   User <aws_access_key_id>
   IdentityFile ~/.ssh/<aws_project>-private_key.pem
 ```
