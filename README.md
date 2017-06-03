@@ -1,8 +1,8 @@
 ## aws cicd pipeline with docker and jenkins
 
-## create an aws account
+### create an aws account
 
-### configure aws-cli:
+#### configure aws-cli:
 
 create an `~/.aws/credentials` file:
 ```bash
@@ -21,7 +21,7 @@ aws_access_key_id =  <aws_access_key_id>
 aws_secret_access_key = <aws_access_key>
 ```
 
-#### setting up ssh
+### setting up ssh
 
 create a github account: [https://github.com/join]
 create a repository for the project []
@@ -33,12 +33,12 @@ ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 
 [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-#### github
+### github
 
 [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)
 
-#### configure git
+### configure git
 
 populate `~/.gitconfig`
 ```bash
@@ -62,7 +62,7 @@ Host git-codecommit.*.amazonaws.com
   IdentityFile ~/.ssh/<aws_project>-private_key.pem
 ```
 
-#### testing your setup
+### testing your setup
 
 testing your connection to github
 ```
