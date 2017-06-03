@@ -4,16 +4,14 @@
 
 ### configure aws-cli:
 
-create an `~/.aws/credentials` file with the following:
-
-***WARNING THIS FILE CONTAINS SENSITIVE INFORMATION**
-please ensure permissions are secure
-avoid the use of shared accounts, passwords
-strong encryption and complex passwords should be used
-for more inforamtion on how to protect your privacy:
-****************************************************
-
+create an `~/.aws/credentials` file:
 ```
+# SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
+#  + ensure permissions are secure (not world read or write)
+#  + do not use shared accounts, names or passwords
+#  + always use strong encryption and complex passwords
+#  + regularly change passwords and store them securely
+
 # [default]
 # aws_access_key_id = <aws_access_key_id>
 # aws_secret_access_key = <aws_access_key>
@@ -23,19 +21,38 @@ aws_access_key_id =  <aws_access_key_id>
 aws_secret_access_key = <aws_access_key>
 ```
 
+#### setting up ssh
+
 create a github account: [https://github.com/join]
-create a repository for the project: 
-
-## provice read write access to the repository
-
-## generating a public/private keypair
+create a repository for the project []
+provice read write access to the repository
+generating a public/private keypair
 ```
 ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
-
 ```
 
+[https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent|generating new keys and adding to ssh-agent]
 
-### configure ssh
+#### github
+
+signup for an account with github
+create a repository to use for the repo
+https://help.github.com/articles/create-a-repo/
+
+#### configure git
+
+populate `~/.gitconfig`
+```
+[credential]
+        helper = !aws codecommit credential-helper $@
+        UseHttpPath = true
+[user]
+        email = <commit_user_email>
+        name = <commit_user>
+```
+
+setup ssh profiles usig `~/.ssh/config`:
+```
 Host github-aws-cicd-pipeline
   HostName github.com
   User git
@@ -45,4 +62,13 @@ Host aws_codecommit
   HostName git-codecommit.*.amazonaws.com
   User <aws_access_key_id>
   IdentityFile ~/.ssh/<aws_project>-private_key.pem
+```
 
+#### testing your setup
+
+testing your connection to github
+```
+ssh -T git@github.com
+```
+[https://help.github.com/articles/testing-your-ssh-connection/|testing your git connection]
+[https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent|generating new keys and adding to ssh-agent]
