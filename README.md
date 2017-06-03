@@ -1,6 +1,7 @@
-   ## aws cicd pipeline with docker and jenkins
+
+## aws cicd pipeline with docker and jenkins
    
-1. Requirements
+1. ### Requirements
 
    For this project you will need:
    
