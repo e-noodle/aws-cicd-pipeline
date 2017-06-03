@@ -31,7 +31,7 @@ generating a public/private keypair
 ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 ```
 
-[generating new keys and adding to ssh-agent] (https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 #### github
 
@@ -69,5 +69,5 @@ testing your connection to github
 ```
 ssh -T git@github.com
 ```
-[testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)
-[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
+[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)<br>
