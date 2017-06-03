@@ -10,39 +10,40 @@ For this project you will need:
 
    1. #### configure aws-cli:
 
-create an `~/.aws/credentials` file:
-```bash
-# SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
-#  + ensure permissions are secure (not world read or write)
-#  + do not use shared accounts, names or passwords
-#  + always use strong encryption and complex passwords
-#  + regularly change passwords and store them securely
+      create an `~/.aws/credentials` file:
+      ```bash
+      # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
+      #  + ensure permissions are secure (not world read or write)
+      #  + do not use shared accounts, names or passwords
+      #  + always use strong encryption and complex passwords
+      #  + regularly change passwords and store them securely
+      
+      # [default]
+      # aws_access_key_id = <aws_access_key_id>
+      # aws_secret_access_key = <aws_access_key>
+      
+      [aws-docker-cicd-admin]
+      aws_access_key_id =  <aws_access_key_id>
+      aws_secret_access_key = <aws_access_key>
+      ```
+      
 
-# [default]
-# aws_access_key_id = <aws_access_key_id>
-# aws_secret_access_key = <aws_access_key>
+   1. ### github
 
-[aws-docker-cicd-admin]
-aws_access_key_id =  <aws_access_key_id>
-aws_secret_access_key = <aws_access_key>
-```
-
-### setting up ssh
-
-### github
-
-[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
-[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
+      1. [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
+      1. [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
 
 
-***generate a public/private keypair***
-```
-ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
-```
+   1. ### setting up ssh
 
-[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
-
-[***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+      1. generate a public/private keypair***
+      ```
+      ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
+      ```
+      
+      1. [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
+      
+      1. [***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
 ### configure git
