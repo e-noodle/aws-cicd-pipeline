@@ -2,9 +2,9 @@
 
 For this project you will need:
 
-1. a github account (setup details below)
-2. a shell account to commit code
-3. a [free usage tier account with aws](https://aws.amazon.com/free/)
+- [x] github account (setup details below)
+- [x] shell account to commit code
+- [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
 
 ### create an aws account
 
@@ -31,23 +31,24 @@ aws_secret_access_key = <aws_access_key>
 
 ### github
 
-- [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
-- [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)]
+[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
+[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
 
 
-1. generate a public/private keypair
+***generate a public/private keypair***
 ```
 ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 ```
 
-[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
 
-2. [provice read write access to the repository]
+[***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
 ### configure git
 
-1. populate `~/.gitconfig`
+populate `~/.gitconfig`
+
 ```bash
 [credential]
         helper = !aws codecommit credential-helper $@
@@ -57,7 +58,8 @@ ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
         name  = <commit_user>
 ```
 
-2. setup ssh profiles usig `~/.ssh/config`:
+setup ssh profiles usig `~/.ssh/config`:
+
 ```bash
 Host github.com/<github_account>
   HostName github.com
@@ -71,7 +73,7 @@ Host git-codecommit.*.amazonaws.com
 
 ### testing your setup
 
-1. testing your connection to github
+testing your connection to github
 ```
 ssh -T git@github.com
 ```
