@@ -21,13 +21,12 @@
 
 1. ### configure aws-cli:
 
-   1. *option 1 - install script (use at your own risk)*
+   1. **option 1 - install script** *(use at your own risk)*
    
-   download and run the following script to configure aws-cli
-   [aws cli setup script](scripts/setup_awscli.sh)
+      download and run [aws cli setup script](scripts/setup_awscli.sh) to configure aws-cli
    
    
-   1. *option 2 - manual*
+   1. **option 2 - manual**
    
    1. create an `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
    
