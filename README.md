@@ -49,10 +49,11 @@
 
    1. generate a public/private keypair
       ```
-      ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
+      ssh-keygen -t rsa -b 2048 -f ~/.ssh/<github_project>-private-key.pem
       ```
-      (optional) [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-   1. [provide read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   1. [granting access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   
+      **Optional** [***adding your to ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 1. ### configure git
