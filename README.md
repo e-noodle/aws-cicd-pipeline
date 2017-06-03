@@ -18,24 +18,24 @@ For this project you will need:
 
 1. #### configure aws-cli:
 
-create an `~/.aws/credentials` file:
-
-```bash
-# SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
-#  + ensure permissions are secure (not world read or write)
-#  + do not use shared accounts, names or passwords
-#  + always use strong encryption and complex passwords
-#  + regularly change passwords and store them securely
-
-# [default]
-# aws_access_key_id = <aws_access_key_id>
-# aws_secret_access_key = <aws_access_key>
-
-[aws-docker-cicd-admin]
-aws_access_key_id =  <aws_access_key_id>
-aws_secret_access_key = <aws_access_key>
-```
-
+   create an `~/.aws/credentials` file:
+   
+   ```bash
+   # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
+   #  + ensure permissions are secure (not world read or write)
+   #  + do not use shared accounts, names or passwords
+   #  + always use strong encryption and complex passwords
+   #  + regularly change passwords and store them securely
+   
+   # [default]
+   # aws_access_key_id = <aws_access_key_id>
+   # aws_secret_access_key = <aws_access_key>
+   
+   [aws-docker-cicd-admin]
+   aws_access_key_id =  <aws_access_key_id>
+   aws_secret_access_key = <aws_access_key>
+   ```
+   
 1. ### github
 
    1. [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
@@ -54,37 +54,37 @@ aws_secret_access_key = <aws_access_key>
    1. [provice read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
-1.   ### configure git
+1. ### configure git
 
-populate `~/.gitconfig`
+   populate `~/.gitconfig`
+   
+   ```bash
+   [credential]
+           helper = !aws codecommit credential-helper $@
+           UseHttpPath = true
+   [user]
+           email = <commit_user_email>
+           name  = <commit_user>
+   ```
+   
+1. ### setup ssh profiles usig `~/.ssh/config`:
 
-```bash
-[credential]
-        helper = !aws codecommit credential-helper $@
-        UseHttpPath = true
-[user]
-        email = <commit_user_email>
-        name  = <commit_user>
-```
+   ```bash
+   Host github.com/<github_account>
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/<github_project>-private-key.pem
+   
+   Host git-codecommit.*.amazonaws.com
+     User <aws_access_key_id>
+     IdentityFile ~/.ssh/<aws_project>-private_key.pem
+   ```
 
-1.   ### setup ssh profiles usig `~/.ssh/config`:
+1. ### testing your setup
 
-```bash
-Host github.com/<github_account>
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/<github_project>-private-key.pem
-
-Host git-codecommit.*.amazonaws.com
-  User <aws_access_key_id>
-  IdentityFile ~/.ssh/<aws_project>-private_key.pem
-```
-
-1.   ### testing your setup
-
-testing your connection to github
-```bash
-ssh -T git@github.com
-```
-
-[testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
+   testing your connection to github
+   ```bash
+   ssh -T git@github.com
+   ```
+   
+   [testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
