@@ -1,8 +1,8 @@
 
 
-## aws cicd pipeline with docker, jenkins and github repo
+## how to setup a cicd pipeline in aws with docker and jenkins
 
-how to run a cicd pipeline in aws with docker and jenkins
+how to setup a cicd pipeline in aws with docker and jenkins
 
 1. ### quick setup
 
@@ -122,7 +122,7 @@ how to run a cicd pipeline in aws with docker and jenkins
 
    1. export env variables to use with the commands below
       ```bash
-      export github_profject=cicd-admin--docker-jenkins-aws
+      export github_project=cicd-admin--docker-jenkins-aws
       ```
    1. generate a public/private keypair
       ```bash
