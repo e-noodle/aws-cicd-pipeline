@@ -6,9 +6,9 @@ For this project you will need:
 - [x] shell account to commit code
 - [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
 
-### create an aws account
+1. ### create an aws account
 
-#### configure aws-cli:
+   1. #### configure aws-cli:
 
 create an `~/.aws/credentials` file:
 ```bash
