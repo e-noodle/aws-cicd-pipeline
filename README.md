@@ -1,5 +1,11 @@
 ## aws cicd pipeline with docker and jenkins
 
+For this project you will need:
+
+1. a github account (setup details below)
+2. a shell account to commit code
+3. a [free usage tier account with aws](https://aws.amazon.com/free/)
+
 ### create an aws account
 
 #### configure aws-cli:
@@ -23,24 +29,25 @@ aws_secret_access_key = <aws_access_key>
 
 ### setting up ssh
 
-create a github account: [https://github.com/join]
-create a repository for the project []
-provice read write access to the repository
-generating a public/private keypair
+### github
+
+[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
+[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)]
+
+
+1. generate a public/private keypair
 ```
 ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 ```
 
 [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-### github
+2. [provice read write access to the repository]
 
-[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
-[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)
 
 ### configure git
 
-populate `~/.gitconfig`
+1. populate `~/.gitconfig`
 ```bash
 [credential]
         helper = !aws codecommit credential-helper $@
@@ -50,7 +57,7 @@ populate `~/.gitconfig`
         name  = <commit_user>
 ```
 
-setup ssh profiles usig `~/.ssh/config`:
+2. setup ssh profiles usig `~/.ssh/config`:
 ```bash
 Host github.com/<github_account>
   HostName github.com
@@ -64,9 +71,9 @@ Host git-codecommit.*.amazonaws.com
 
 ### testing your setup
 
-testing your connection to github
+1. testing your connection to github
 ```
 ssh -T git@github.com
 ```
+
 [testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
-[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)<br>
