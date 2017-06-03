@@ -48,7 +48,7 @@ For this project you will need:
       ```
       ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
       ```
-      for more info on [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional) 
+      (optional) [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
    1. [provide read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
@@ -85,5 +85,4 @@ For this project you will need:
    ```bash
    ssh -T git@github.com
    ```
-   
-   [testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
+   more info visit: [testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)<br>
