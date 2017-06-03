@@ -24,13 +24,12 @@
    1. *option 1 - install script (use at your own risk)*
    
    download and run the following script to configure aws-cli
-   [aws cli setup script](script/setup_awscli.sh)
+   [aws cli setup script](scripts/setup_awscli.sh)
    
    
-   1  *option 2 - manual*
+   1. *option 2 - manual*
    
-   1. create an `~/.aws/credentials` file:
-      - replace `${PROFILE_NAME}` with the name of your project
+   1. create an `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
    
    ```bash
    # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
@@ -48,8 +47,7 @@
    aws_access_key_id =  <cid_aws_access_key_id>
    aws_secret_access_key = <cicd_aws_access_key>
    ``` 
-   1. create `/.aws/config` to store profile
-      - replace `${PROFILE_NAME}` with the name of your project
+   1. create `/.aws/config` with the following, replacing `${PROFILE_NAME}` with the name of your project.
 
    ```bash
    [default]
@@ -89,7 +87,7 @@
       ```bash
       ssh-keygen -t rsa -b 2048 -f ~/.ssh/${github_project}-private-key -N ""
       ```
-      - **note** the `-N ""` above will revent the passphrase prompt from appearing
+      **note** `-N ""` above will revent the passphrase prompt from appearing
    1. ensure correct permissions
       ```bash
       chmod 600 ~/.ssh/${github_project}-private-key
