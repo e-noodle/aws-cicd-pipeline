@@ -47,13 +47,23 @@
 
 1. ### create a secure private key and grant acceess to your repository
 
+   1. export env variables to use with the commands below
+      ```bash
+      export github_profject=cicd-admin--docker-jenkins-aws
+      ```
    1. generate a public/private keypair
+      ```bash
+      ssh-keygen -t rsa -b 2048 -f ~/.ssh/${github_project}-private-key -N ""
       ```
-      ssh-keygen -t rsa -b 2048 -f ~/.ssh/<github_project>-private-key.pem
+      - **note** the `-N ""` above will revent the passphrase prompt from appearing
+   1. ensure correct permissions
+      ```bash
+      chmod 600 ~/.ssh/${github_project}-private-key
+      chown $(whoami):$(whoami) ~/.ssh/${github_project}-private-key
       ```
-   1. [granting access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   1. [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
    
-      **Optional** [***adding your to ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+      **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 1. ### configure git
