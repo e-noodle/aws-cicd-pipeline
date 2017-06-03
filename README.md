@@ -31,8 +31,8 @@ aws_secret_access_key = <aws_access_key>
 
 ### github
 
-[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
-[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)]
+- [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
+- [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)]
 
 
 1. generate a public/private keypair
