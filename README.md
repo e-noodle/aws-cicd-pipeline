@@ -102,8 +102,7 @@
          - add a deployment key for your repository at `https://github.com/<user-account>/<project>/settings/keys`
          - more inforamtion on deployment keys 
            <br>https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
-      - **optional** keys which require passphrases see
-           <br>[***adding your private key to ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+      - **optional** keys which are encrypted with a passphrase will need to [***add their private key to ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 1. ### configure git
