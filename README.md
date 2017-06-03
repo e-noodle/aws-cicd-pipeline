@@ -34,7 +34,7 @@ create an `~/.aws/credentials` file:
 [aws-docker-cicd-admin]
 aws_access_key_id =  <aws_access_key_id>
 aws_secret_access_key = <aws_access_key>
-      ```
+```
 
 1. ### github
 
@@ -44,14 +44,14 @@ aws_secret_access_key = <aws_access_key>
 
 1. ### setting up ssh
 
-   1. generate a public/private keypair***
+   1. generate a public/private keypair
    ```
    ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
    ```
    
    1. [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
    
-   1. [***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   1. [provice read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
 1.   ### configure git
@@ -83,7 +83,7 @@ Host git-codecommit.*.amazonaws.com
 1.   ### testing your setup
 
 testing your connection to github
-```
+```bash
 ssh -T git@github.com
 ```
 
