@@ -42,7 +42,7 @@ For this project you will need:
    1. [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
 
 
-1. ### setting up ssh
+1. ### create a secure private key and grant acceess to your repository
 
    1. generate a public/private keypair
       ```
@@ -65,7 +65,8 @@ For this project you will need:
            name  = <commit_user>
    ```
    
-1. ### setup ssh profiles usig `~/.ssh/config`:
+1. ### create a ssh profile
+   setup ssh profiles usig `~/.ssh/config`:
 
    ```bash
    Host github.com/<github_account>
