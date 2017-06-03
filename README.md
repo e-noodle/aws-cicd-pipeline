@@ -5,7 +5,7 @@
 ### configure aws-cli:
 
 create an `~/.aws/credentials` file:
-```
+```bash
 # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
 #  + ensure permissions are secure (not world read or write)
 #  + do not use shared accounts, names or passwords
@@ -35,24 +35,23 @@ ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 
 #### github
 
-signup for an account with github
-create a repository to use for the repo
-https://help.github.com/articles/create-a-repo/
+[signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
+[create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)
 
 #### configure git
 
 populate `~/.gitconfig`
-```
+```bash
 [credential]
         helper = !aws codecommit credential-helper $@
         UseHttpPath = true
 [user]
         email = <commit_user_email>
-        name = <commit_user>
+        name  = <commit_user>
 ```
 
 setup ssh profiles usig `~/.ssh/config`:
-```
+```bash
 Host github.com/<github_account>
   HostName github.com
   User git
