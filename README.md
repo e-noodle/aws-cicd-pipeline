@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## aws cicd pipeline with docker and jenkins
 
 ## create an aws account
@@ -71,3 +72,26 @@ ssh -T git@github.com
 ```
 [https://help.github.com/articles/testing-your-ssh-connection/|testing your git connection]
 [https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent|generating new keys and adding to ssh-agent]
+=======
+---
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+-------
+>>>>>>> d5afe1e436f043fd31f5185d1cfa56f13daa37c3
