@@ -1,11 +1,11 @@
-## aws cicd pipeline with docker and jenkins
-
-For this project you will need:
-
-- [x] github account (setup details below)
-- [x] shell account to commit code
-- [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
-
+   ## aws cicd pipeline with docker and jenkins
+   
+   For this project you will need:
+   
+   - [x] github account (setup details below)
+   - [x] shell account to commit code
+   - [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
+   
 1. ### create an aws account
 
    1. login to the account console
