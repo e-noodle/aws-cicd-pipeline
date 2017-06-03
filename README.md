@@ -8,45 +8,53 @@ For this project you will need:
 
 1. ### create an aws account
 
-   1. #### configure aws-cli:
+   1. login to the account console
+   1. create an account and generate an access key to provide jenkins management access
+      1. how to create an account using aws
+      1. how to create an access key
+   1. obtain the account credientials
+      1. `<aws_access_key_id>`
+      1. `<aws_secret_access_key>`
 
-      create an `~/.aws/credentials` file:
-      ```bash
-      # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
-      #  + ensure permissions are secure (not world read or write)
-      #  + do not use shared accounts, names or passwords
-      #  + always use strong encryption and complex passwords
-      #  + regularly change passwords and store them securely
-      
-      # [default]
-      # aws_access_key_id = <aws_access_key_id>
-      # aws_secret_access_key = <aws_access_key>
-      
-      [aws-docker-cicd-admin]
-      aws_access_key_id =  <aws_access_key_id>
-      aws_secret_access_key = <aws_access_key>
+1. #### configure aws-cli:
+
+create an `~/.aws/credentials` file:
+
+```bash
+# SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
+#  + ensure permissions are secure (not world read or write)
+#  + do not use shared accounts, names or passwords
+#  + always use strong encryption and complex passwords
+#  + regularly change passwords and store them securely
+
+# [default]
+# aws_access_key_id = <aws_access_key_id>
+# aws_secret_access_key = <aws_access_key>
+
+[aws-docker-cicd-admin]
+aws_access_key_id =  <aws_access_key_id>
+aws_secret_access_key = <aws_access_key>
       ```
-      
 
-   1. ### github
+1. ### github
 
-      1. [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
-      1. [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
-
-
-   1. ### setting up ssh
-
-      1. generate a public/private keypair***
-      ```
-      ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
-      ```
-      
-      1. [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
-      
-      1. [***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   1. [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)<br>
+   1. [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
 
 
-### configure git
+1. ### setting up ssh
+
+   1. generate a public/private keypair***
+   ```
+   ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
+   ```
+   
+   1. [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional)
+   
+   1. [***provice read write access to the github repository***](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
+
+1.   ### configure git
 
 populate `~/.gitconfig`
 
@@ -59,7 +67,7 @@ populate `~/.gitconfig`
         name  = <commit_user>
 ```
 
-setup ssh profiles usig `~/.ssh/config`:
+1.   ### setup ssh profiles usig `~/.ssh/config`:
 
 ```bash
 Host github.com/<github_account>
@@ -72,7 +80,7 @@ Host git-codecommit.*.amazonaws.com
   IdentityFile ~/.ssh/<aws_project>-private_key.pem
 ```
 
-### testing your setup
+1.   ### testing your setup
 
 testing your connection to github
 ```
