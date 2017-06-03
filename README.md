@@ -1,7 +1,7 @@
 
 ## aws cicd pipeline with docker and jenkins
    
-1. ### Requirements
+1. ### requirements
 
    For this project you will need:
    
@@ -19,7 +19,7 @@
       1. `<aws_access_key_id>`
       1. `<aws_secret_access_key>`
 
-1. #### configure aws-cli:
+1. ### configure aws-cli:
 
    create an `~/.aws/credentials` file:
    
