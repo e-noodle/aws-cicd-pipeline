@@ -57,20 +57,21 @@ how to run a cicd pipeline in aws with docker and jenkins
    
    1. **option 2 - manual**
 
-       1. install awscli
+      1. install awscli
          
          ```bash
          # configure epel repository
          rpm -ivH http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.noarch.rpm
-
+         
          # install awscli
          yum --enablerepo=epel -y install awscli
          ```
-         
+          
       1. create `~/.aws` directory
          ```
          mkdir -p ~/.aws
          ```
+         
       1. create a `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
          ```bash
          # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
