@@ -1,13 +1,12 @@
 #!/bin/bash
 # ---
-# title:       pe_puppet_init
+# title:       setup_awscli
 #
 # description: pe 2016.2 init script
 # author:      sensei@enoodle.com.au
-# source:      http://github.com/e-noodle/aws-cicd-pipeline/scripts/puppet_init.sh
+# source:      http://github.com/e-noodle/aws-cicd-pipeline/scripts/setup_awscli.sh
 #
-# changelog:   version: 0.0.1, updated_by: sensei, date: 20160804, log: initial script
-
+# changelog:   version: 0.0.1, updated_by: sensei, date: 20170604, log: initial script
 
 #############
 # vars
@@ -16,7 +15,6 @@
 PROFILE_NAME=$1
 PRECHECK=true
 SLOG=/var/log/$(basename $0).log
-
 
 #############
 # functions
@@ -62,7 +60,6 @@ function prechecks {
 
 prechecks
 
-
 ################
 # create profle
 ################
@@ -105,8 +102,7 @@ EOF
 
 pp "setting permissions"
 chmod 600 ~/.aws/{credentials,config} 
-chown -Rf #(whoami):$(whoami) ~/.aws/{credentials,config}
-
+chown -Rf $(whoami):$(whoami) ~/.aws/{credentials,config}
 
 [[$? -eq 0]] || die 'error setting permissions'
 pp " => completed"
