@@ -45,7 +45,9 @@
    1. [create a repository to use for the repo](https://help.github.com/articles/create-a-repo/)<br>
 
 
-1. ### create a secure private key and grant acceess to your repository
+1. ### generate keys for the project
+
+   create a secure private key to grant acceess to your github repository
 
    1. export env variables to use with the commands below
       ```bash
@@ -61,8 +63,12 @@
       chmod 600 ~/.ssh/${github_project}-private-key
       chown $(whoami):$(whoami) ~/.ssh/${github_project}-private-key
       ```
-   1. [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-   
+1. ### granting access to github
+
+      [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+      **note** free github account users will need to use the deployment key to grant permissions on a per repository basis.
+      to add a deployment key for your repository visit `https://github.com/<user-account>/<project>/settings/keys`
+      for more inforamtion on deployment keys visit: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
       **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
