@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## aws cicd pipeline with docker and jenkins
 
 ## create an aws account
@@ -32,7 +31,7 @@ generating a public/private keypair
 ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
 ```
 
-[https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent|generating new keys and adding to ssh-agent]
+[generating new keys and adding to ssh-agent] (https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 #### github
 
@@ -70,28 +69,5 @@ testing your connection to github
 ```
 ssh -T git@github.com
 ```
-[https://help.github.com/articles/testing-your-ssh-connection/|testing your git connection]
-[https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent|generating new keys and adding to ssh-agent]
-=======
----
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
--------
->>>>>>> d5afe1e436f043fd31f5185d1cfa56f13daa37c3
+[testing your git connection](https://help.github.com/articles/testing-your-ssh-connection/)
+[generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
