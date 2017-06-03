@@ -9,7 +9,7 @@ how to setup a cicd pipeline in aws with docker and jenkins
 
    you will need:
 
-   - [x] github account [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/))
+   - [x] github account [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/)
    - [x] a unix account with sudo privileges
       -  **no unix account?** [access to cloud9s development platform is free](https://c9.io)
    - [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
