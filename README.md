@@ -63,13 +63,13 @@
       chmod 600 ~/.ssh/${github_project}-private-key
       chown $(whoami):$(whoami) ~/.ssh/${github_project}-private-key
       ```
-1. ### granting access to github
+1. ### grant access to your github repository
 
-      [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-      **note** free github account users will need to use the deployment key to grant permissions on a per repository basis.
-      to add a deployment key for your repository visit `https://github.com/<user-account>/<project>/settings/keys`
-      for more inforamtion on deployment keys visit: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
-      **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+      - [provide access to your github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+      - **note** free github account users will need to use the deployment key to grant permissions on a per repository basis.
+         - to add a deployment key for your repository visit `https://github.com/<user-account>/<project>/settings/keys`
+         - for more inforamtion on deployment keys visit: https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys
+      - **Optional** [***adding your private key to your ssh-agent***](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 1. ### configure git
