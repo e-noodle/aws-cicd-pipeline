@@ -49,7 +49,7 @@ For this project you will need:
       ssh-keygen -t rsa -b 2048 ~/.ssh/<github_project>-private-key.pem
       ```
    1. [generating new keys and adding to ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (optional) 
-   1. [provice read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+   1. [provide read write access to the github repository](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
 
 1. ### configure git
