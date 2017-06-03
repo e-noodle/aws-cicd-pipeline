@@ -28,39 +28,39 @@
    
    1. **option 2 - manual**
    
-   1. create an `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
-      ```bash
-      # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
-      #  + ensure permissions are secure (not world read or write)
-      #  + do not use shared accounts, names or passwords
-      #  + always use strong encryption and complex passwords
-      #  + regularly change passwords and store them securely
-      #
-      #
-      # [default]
-      # aws_access_key_id = <aws_access_key_id>
-      # aws_secret_access_key = <aws_access_key>
-      
-      [${PROFILENAME}]
-      aws_access_key_id =  <cid_aws_access_key_id>
-      aws_secret_access_key = <cicd_aws_access_key>
-      ``` 
-   1. create `/.aws/config` with the following, replacing `${PROFILE_NAME}` with the name of your project.
-      ```bash
-      [default]
-      region = us-east-1
-      output = json
-      [${PROFILE_NAME}]
-      output = json
-      region = us-east-1
-      ```
-   1. set permissions
-      ```bash
-      chmod 600 ~/.aws/{credentials,config} 
-      chown $(whoami):$(whoami) ~/.aws/{credentials,config}
-      ```
-   1. populate <aws_access_key_id>  and <aws_access_key> in ~/.aws/credentials with the account credentials.
-   1. confirm the region settings provided in ~/.aws/config
+      1. create an `~/.aws/credentials` file with the following replacing `${PROFILE_NAME}` with the name of your project.
+         ```bash
+         # SECURITY WARNING: FILE CONTAINS SENSITIVE INFORMATION
+         #  + ensure permissions are secure (not world read or write)
+         #  + do not use shared accounts, names or passwords
+         #  + always use strong encryption and complex passwords
+         #  + regularly change passwords and store them securely
+         #
+         #
+         # [default]
+         # aws_access_key_id = <aws_access_key_id>
+         # aws_secret_access_key = <aws_access_key>
+         
+         [${PROFILENAME}]
+         aws_access_key_id =  <cid_aws_access_key_id>
+         aws_secret_access_key = <cicd_aws_access_key>
+         ``` 
+      1. create `/.aws/config` with the following, replacing `${PROFILE_NAME}` with the name of your project.
+         ```bash
+         [default]
+         region = us-east-1
+         output = json
+         [${PROFILE_NAME}]
+         output = json
+         region = us-east-1
+         ```
+      1. set permissions
+         ```bash
+         chmod 600 ~/.aws/{credentials,config} 
+         chown $(whoami):$(whoami) ~/.aws/{credentials,config}
+         ```
+      1. populate <aws_access_key_id>  and <aws_access_key> in ~/.aws/credentials with the account credentials.
+      1. confirm the region settings provided in ~/.aws/config
 
 1. ### github
 
