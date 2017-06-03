@@ -4,6 +4,18 @@
 
 how to setup a cicd pipeline in aws with docker and jenkins
 
+
+1. ### requirements
+
+   you will need:
+
+   - [x] github account [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/))
+   - [x] a unix account with sudo privileges
+      -  sign up for a free webbased development platform based on ubuntu at https://c9.io
+   - [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
+
+
+
 1. ### quick setup
 
    1. clone repo and install awscli tools
@@ -11,24 +23,14 @@ how to setup a cicd pipeline in aws with docker and jenkins
       git clone https://github.com/e-noodle/aws-cicd-pipeline.git
       sudo /bin/bash scripts/setup_awscli.sh
       ```
-     1. [setup a github repository](#github)
-     2. [generate-keys-for-the-project](#generate-keys-for-the-project)
-     3. [grant access to your github repository](#grant-access-to-your-github-repository)
-     4. [configure git](#configure-git)
-     5. [create a ssh profile](#create-a-ssh-profile)
-     6. [testing your setup](#testing-your-setup)
-     7. [connecting to aws](#connecting-to-aws)
+      1. [setup a github repository](#github)
+      2. [generate-keys-for-the-project](#generate-keys-for-the-project)
+      3. [grant access to your github repository](#grant-access-to-your-github-repository)
+      4. [configure git](#configure-git)
+      5. [create a ssh profile](#create-a-ssh-profile)
+      6. [testing your setup](#testing-your-setup)
+      7. [connecting to aws](#connecting-to-aws)
  
-
-1. ### requirements
-
-  you will need:
-   
-   - [x] github account [signup for an account with github](https://help.github.com/articles/signing-up-for-a-new-github-account/))
-   - [x] a unix account with sudo privileges
-      -  sign up for a free webbased development platform based on ubuntu at https://c9.io
-   - [x] aws account or [signup for a free usage tier account with aws](https://aws.amazon.com/free/)
-   
 
 
 1. ### create an aws account
